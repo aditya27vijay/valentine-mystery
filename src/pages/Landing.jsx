@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/landing.css";
 
 export default function Landing() {
+  const navigate = useNavigate();
+
   return (
     <div className="landing-container">
       <div className="case-file">
@@ -20,12 +23,15 @@ export default function Landing() {
           <p><strong>Last Seen:</strong> The moment I met you</p>
         </div>
 
-        <button className="start-btn">
+        <button
+          className="start-btn"
+          onClick={() => navigate("/clue1")}
+        >
           Start Investigation
         </button>
 
         <p className="warning">
-          ⚠️ This case contains sensitive emotional material.
+          💜 A gentle mystery awaits you.
         </p>
       </div>
     </div>
