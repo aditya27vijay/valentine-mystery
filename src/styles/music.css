@@ -1,0 +1,18 @@
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff9edb, #c77dff);
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(199, 125, 255, 0.5);
+  z-index: 999;
+}
+
+.music-btn:active {
+  transform: scale(0.95);
+}
