@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../styles/letter.css";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Clue2() {
   // ✏️ EDIT YOUR LETTER HERE
@@ -12,6 +14,9 @@ export default function Clue2() {
     "feels safest.",
   ];
 
+  const navigate = useNavigate();
+
+
   const [revealed, setRevealed] = useState(
     Array(letterParts.length).fill(false)
   );
@@ -23,6 +28,7 @@ export default function Clue2() {
   };
 
   const allRevealed = revealed.every(Boolean);
+
 
   return (
     <div className="letter-container">
@@ -52,9 +58,10 @@ export default function Clue2() {
               Some truths only appear when you take your time 💜
             </p>
 
-            <button className="letter-next-btn">
-              Continue
-            </button>
+            <button className="letter-next-btn" onClick={() => navigate("/clue3")}>
+  Continue
+</button>
+
           </>
         )}
       </div>
