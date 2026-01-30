@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../styles/quiz.css";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Clue1() {
   // ✏️ EDIT QUESTIONS HERE
@@ -25,6 +27,7 @@ export default function Clue1() {
   const [selected, setSelected] = useState(null);
   const [status, setStatus] = useState("playing"); 
   // status: "playing" | "failed" | "success"
+  const navigate = useNavigate();
 
   const handleOptionClick = (index) => {
     setSelected(index);
@@ -107,9 +110,10 @@ export default function Clue1() {
               Let’s move forward.
             </p>
 
-            <button className="quiz-next-btn">
-              Continue
-            </button>
+            <button className="quiz-next-btn" onClick={() => navigate("/clue2")}>
+  Continue
+</button>
+
           </>
         )}
       </div>
