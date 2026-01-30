@@ -10,7 +10,7 @@ export default function Clue3() {
   const questions = [
     {
       question: "Where was this moment from?",
-      options: ["Just another day", "A random place", "A moment I’ll never forget"],
+      options: ["Toscano", "A random place", "Soy Soi"],
       correctIndex: 2,
     },
     {
